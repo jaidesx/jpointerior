@@ -722,3 +722,109 @@ textarea {
     background: rgba(59, 93, 80, 0.2); }
 
 
+/* ===== Phone Responsiveness ===== */
+@media (max-width: 768px) {
+
+  /* Navbar adjustments */
+  .custom-navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .custom-navbar .navbar-brand {
+    font-size: 24px;
+  }
+  .custom-navbar .custom-navbar-nav {
+    text-align: center;
+  }
+  .custom-navbar .custom-navbar-nav li {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .custom-navbar .custom-navbar-nav li a {
+    font-size: 14px;
+    opacity: 0.8;
+  }
+
+  /* Hero section */
+  .hero h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+  .hero p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .hero .hero-img-wrap img {
+    position: relative;
+    left: 0;
+    top: 0;
+    max-width: 100%;
+    right: 0;
+  }
+  .hero .hero-img-wrap:after {
+    display: none;
+  }
+
+  /* Product section */
+  .product-section .product-item {
+    padding-bottom: 30px;
+  }
+  .product-section .product-item:hover .product-thumbnail {
+    top: -10px;
+  }
+  .product-section .product-item:before {
+    height: 50%;
+  }
+
+  /* Why choose / we-help images */
+  .why-choose-section .img-wrap,
+  .we-help-section .imgs-grid {
+    display: block;
+  }
+  .why-choose-section .img-wrap img,
+  .we-help-section .imgs-grid img {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  /* Blog section */
+  .blog-section .post-entry {
+    margin-bottom: 30px;
+  }
+  .blog-section .post-entry .post-content-entry {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Footer section */
+  .footer-section .sofa-img {
+    display: none;
+  }
+
+  /* Buttons */
+  .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Extra small phones adjustments */
+  .custom-navbar .navbar-brand {
+    font-size: 20px;
+  }
+  .hero h1 {
+    font-size: 22px;
+  }
+  .product-section .product-item h3,
+  .product-section .product-item strong {
+    font-size: 14px;
+  }
+  .testimonial-slider-wrap .item .testimonial-block blockquote {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .footer-section .subscription-form h3 {
+    font-size: 16px;
+  }
+}
