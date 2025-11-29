@@ -720,3 +720,659 @@ textarea {
     height: 120px;
     border-radius: 50%;
     background: rgba(59, 93, 80, 0.2); }
+
+/* ========================================
+   MOBILE RESPONSIVE FIXES FOR JPO INTERIOR
+   Add these styles at the end of your CSS file
+   ======================================== */
+
+/* Global Box Sizing & Overflow Fix */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Image Responsiveness */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Container Fixes */
+.container {
+  width: 100%;
+  max-width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+/* Row Fixes */
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row > * {
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+}
+
+/* ========================================
+   NAVBAR MOBILE FIXES
+   ======================================== */
+.custom-navbar {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+@media (min-width: 768px) {
+  .custom-navbar {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.custom-navbar .navbar-brand img {
+  height: 50px !important;
+}
+
+@media (min-width: 768px) {
+  .custom-navbar .navbar-brand img {
+    height: 80px !important;
+  }
+}
+
+/* ========================================
+   HERO SECTION MOBILE FIXES
+   ======================================== */
+.hero {
+  background: #3b5d50;
+  padding: 2rem 0 2rem 0;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: calc(4rem - 30px) 0 4rem 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .hero {
+    padding: calc(8rem - 30px) 0 8rem 0;
+  }
+}
+
+/* Hero Content */
+.hero .intro-excerpt {
+  position: relative;
+  z-index: 4;
+  padding: 0 15px;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 992px) {
+  .hero .intro-excerpt {
+    max-width: 450px;
+    padding: 0;
+    margin-bottom: 0;
+  }
+}
+
+.hero h1 {
+  font-size: 32px;
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  .hero h1 {
+    font-size: 42px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .hero h1 {
+    font-size: 54px;
+  }
+}
+
+/* Hero Image - CRITICAL FIX */
+.hero .hero-img-wrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+@media (min-width: 992px) {
+  .hero .hero-img-wrap {
+    margin-top: 0;
+  }
+}
+
+.hero .hero-img-wrap img {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 2;
+}
+
+@media (min-width: 768px) {
+  .hero .hero-img-wrap img {
+    max-width: 600px;
+    left: -50px;
+  }
+}
+
+@media (min-width: 992px) {
+  .hero .hero-img-wrap img {
+    position: absolute;
+    max-width: 780px;
+    left: 0px;
+    top: -80px;
+    right: -50px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero .hero-img-wrap img {
+    left: 0px;
+    top: -80px;
+    right: -100px;
+  }
+}
+
+/* Hide decorative dots on mobile */
+.hero .hero-img-wrap:after {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .hero .hero-img-wrap:after {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 255px;
+    height: 217px;
+    background-image: url("../images/dots-light.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    right: -100px;
+    top: -0px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero .hero-img-wrap:after {
+    top: -40px;
+  }
+}
+
+/* ========================================
+   PRODUCT SECTION MOBILE FIXES
+   ======================================== */
+.product-section {
+  padding: 3rem 0;
+}
+
+@media (min-width: 768px) {
+  .product-section {
+    padding: 5rem 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .product-section {
+    padding: 7rem 0;
+  }
+}
+
+.product-section .product-item .product-thumbnail img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ========================================
+   WHY CHOOSE SECTION MOBILE FIXES
+   ======================================== */
+.why-choose-section {
+  padding: 3rem 0;
+}
+
+@media (min-width: 768px) {
+  .why-choose-section {
+    padding: 5rem 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .why-choose-section {
+    padding: 7rem 0;
+  }
+}
+
+.why-choose-section .img-wrap {
+  margin-bottom: 30px;
+}
+
+@media (min-width: 992px) {
+  .why-choose-section .img-wrap {
+    margin-bottom: 0;
+  }
+}
+
+.why-choose-section .img-wrap img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+/* Hide decorative dots on mobile */
+.why-choose-section .img-wrap:before {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .why-choose-section .img-wrap:before {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 255px;
+    height: 217px;
+    background-image: url("../images/dots-yellow.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: translate(-40%, -40%);
+    z-index: -1;
+  }
+}
+
+/* ========================================
+   WE HELP SECTION MOBILE FIXES
+   ======================================== */
+.we-help-section {
+  padding: 3rem 0;
+}
+
+@media (min-width: 768px) {
+  .we-help-section {
+    padding: 5rem 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .we-help-section {
+    padding: 7rem 0;
+  }
+}
+
+/* Stack grid on mobile */
+.we-help-section .imgs-grid {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .we-help-section .imgs-grid {
+    display: grid;
+    grid-template-columns: repeat(27, 1fr);
+  }
+}
+
+.we-help-section .imgs-grid .grid {
+  margin-bottom: 20px;
+  grid-column: auto !important;
+  grid-row: auto !important;
+  padding: 0 !important;
+}
+
+@media (min-width: 768px) {
+  .we-help-section .imgs-grid .grid {
+    margin-bottom: 0;
+  }
+
+  .we-help-section .imgs-grid .grid.grid-1 {
+    grid-column: 1 / span 18 !important;
+    grid-row: 1 / span 27 !important;
+  }
+
+  .we-help-section .imgs-grid .grid.grid-2 {
+    grid-column: 19 / span 27 !important;
+    grid-row: 1 / span 5 !important;
+    padding-left: 20px !important;
+  }
+
+  .we-help-section .imgs-grid .grid.grid-3 {
+    grid-column: 14 / span 16 !important;
+    grid-row: 6 / span 27 !important;
+    padding-top: 20px !important;
+  }
+}
+
+.we-help-section .imgs-grid .grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+/* Hide decorative dots on mobile */
+.we-help-section .imgs-grid:before {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .we-help-section .imgs-grid:before {
+    display: block;
+  }
+}
+
+/* ========================================
+   CUSTOM LIST MOBILE FIXES
+   ======================================== */
+.custom-list li {
+  width: 100%;
+  display: block;
+  margin-bottom: 12px;
+}
+
+@media (min-width: 576px) {
+  .custom-list li {
+    display: inline-block;
+    width: calc(50% - 20px);
+  }
+}
+
+/* ========================================
+   POPULAR PRODUCT MOBILE FIXES
+   ======================================== */
+.popular-product {
+  padding: 0 0 3rem 0;
+}
+
+@media (min-width: 768px) {
+  .popular-product {
+    padding: 0 0 5rem 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .popular-product {
+    padding: 0 0 7rem 0;
+  }
+}
+
+.popular-product .product-item-sm .thumbnail {
+  flex: 0 0 80px;
+}
+
+@media (min-width: 576px) {
+  .popular-product .product-item-sm .thumbnail {
+    flex: 0 0 120px;
+  }
+}
+
+/* ========================================
+   BLOG SECTION MOBILE FIXES
+   ======================================== */
+.blog-section,
+.before-footer-section {
+  padding: 3rem 0 5rem 0 !important;
+}
+
+@media (min-width: 768px) {
+  .blog-section,
+  .before-footer-section {
+    padding: 5rem 0 8rem 0 !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .blog-section,
+  .before-footer-section {
+    padding: 7rem 0 12rem 0 !important;
+  }
+}
+
+.blog-section .post-entry .post-thumbnail img {
+  width: 100%;
+  height: auto;
+}
+
+/* ========================================
+   FOOTER SECTION MOBILE FIXES
+   ======================================== */
+.footer-section {
+  padding: 40px 0;
+}
+
+@media (min-width: 768px) {
+  .footer-section {
+    padding: 60px 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .footer-section {
+    padding: 80px 0;
+  }
+}
+
+/* Hide sofa image on mobile */
+.footer-section .sofa-img {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .footer-section .sofa-img {
+    display: block;
+    position: absolute;
+    top: -200px;
+    z-index: 1;
+    right: 0;
+  }
+}
+
+.footer-section .sofa-img img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (min-width: 992px) {
+  .footer-section .sofa-img img {
+    max-width: 380px;
+  }
+}
+
+.footer-section .subscription-form {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+@media (min-width: 992px) {
+  .footer-section .subscription-form {
+    margin-top: 0px;
+    margin-bottom: 80px;
+  }
+}
+
+/* ========================================
+   TABLE MOBILE FIXES
+   ======================================== */
+.site-blocks-table {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 767px) {
+  .site-blocks-table {
+    font-size: 12px;
+  }
+
+  .site-blocks-table .product-thumbnail {
+    width: 80px;
+  }
+
+  .site-blocks-table thead th {
+    padding: 15px 8px;
+    font-size: 14px;
+  }
+
+  .site-blocks-table td {
+    padding: 15px 8px;
+    font-size: 12px;
+  }
+}
+
+/* ========================================
+   GENERAL SECTION PADDING MOBILE
+   ======================================== */
+.untree_co-section,
+.testimonial-section {
+  padding: 3rem 0;
+}
+
+@media (min-width: 768px) {
+  .untree_co-section,
+  .testimonial-section {
+    padding: 5rem 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .untree_co-section,
+  .testimonial-section {
+    padding: 7rem 0;
+  }
+}
+
+/* ========================================
+   BUTTON MOBILE ADJUSTMENTS
+   ======================================== */
+.btn {
+  padding: 10px 24px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+@media (min-width: 576px) {
+  .btn {
+    padding: 12px 30px;
+    font-size: 14px;
+  }
+}
+
+/* ========================================
+   COLUMN STACKING FOR MOBILE
+   ======================================== */
+@media (max-width: 767px) {
+  [class*="col-"] {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .col-12 {
+    margin-bottom: 0;
+  }
+}
+
+/* ========================================
+   TEXT SIZING MOBILE
+   ======================================== */
+@media (max-width: 767px) {
+  h1 {
+    font-size: 28px !important;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  .section-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+}
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+.mobile-center {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .mobile-center {
+    text-align: left;
+  }
+}
+
+/* Prevent horizontal scroll */
+.no-overflow {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* ========================================
+   FINAL SAFETY FIXES
+   ======================================== */
+* {
+  max-width: 100%;
+}
+
+html, body {
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
