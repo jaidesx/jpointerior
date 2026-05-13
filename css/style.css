@@ -1479,3 +1479,359 @@ html {
   border-radius: 6px;
 }
 
+/* =======================================================================
+   LEVEL 2 — BEST MODERN INTERIOR WEBSITE ENHANCEMENTS
+   ======================================================================= */
+
+/* --- Custom scrollbar ----------------------------------------------- */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #FAF8F5; }
+::-webkit-scrollbar-thumb { background: #C9A96E; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #b8956a; }
+
+/* --- Back-to-top button --------------------------------------------- */
+.back-to-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 46px;
+  height: 46px;
+  background: #1C1C1C;
+  color: #C9A96E;
+  border: none;
+  border-radius: 2px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 9999;
+  text-decoration: none !important;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-top:hover {
+  background: #C9A96E;
+  color: #fff !important;
+}
+
+/* --- Scroll-down indicator on home hero ----------------------------- */
+.scroll-indicator {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 5;
+  animation: scrollBounce 2.2s infinite ease-in-out;
+  opacity: 0.55;
+}
+
+.scroll-indicator .scroll-line {
+  display: block;
+  width: 1px;
+  height: 46px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0.6));
+  margin-bottom: 6px;
+}
+
+.scroll-indicator .scroll-arrow {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-right: 1px solid rgba(255,255,255,0.7);
+  border-bottom: 1px solid rgba(255,255,255,0.7);
+  transform: rotate(45deg);
+}
+
+@keyframes scrollBounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(10px); }
+}
+
+@media (max-width: 768px) { .scroll-indicator { display: none; } }
+
+/* --- Testimonial: large decorative quote mark ----------------------- */
+.testimonial-block blockquote {
+  position: relative;
+  padding-top: 48px;
+}
+
+.testimonial-block blockquote::before {
+  content: '\201C';
+  font-family: 'Playfair Display', serif;
+  font-size: 120px;
+  line-height: 1;
+  color: #C9A96E;
+  opacity: 0.2;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+/* --- Star ratings --------------------------------------------------- */
+.star-rating {
+  display: block;
+  color: #C9A96E;
+  font-size: 11px;
+  letter-spacing: 3px;
+  margin-bottom: 8px;
+}
+
+/* --- Product badge system ------------------------------------------- */
+.product-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  padding: 4px 10px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.product-badge.badge-new      { background: #3b5d50; color: #fff; }
+.product-badge.badge-sale     { background: #C9A96E; color: #fff; }
+.product-badge.badge-featured { background: #1C1C1C; color: #fff; }
+
+/* --- Product price display ------------------------------------------ */
+.product-price-wrap {
+  padding: 6px 16px 4px;
+}
+
+.product-price {
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1C1C1C;
+}
+
+.product-price .was {
+  font-size: 12px;
+  color: #b0a898;
+  text-decoration: line-through;
+  margin-left: 6px;
+  font-weight: 400;
+  font-family: 'Inter', sans-serif;
+}
+
+/* --- Shop filter bar ------------------------------------------------ */
+.shop-filter-bar {
+  padding: 2.5rem 0 0;
+  border-bottom: 1px solid #EDE8E0;
+  margin-bottom: 3.5rem;
+}
+
+.shop-filter-bar .filter-btn {
+  background: none;
+  border: none;
+  padding: 10px 22px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #9A9A92;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  transition: all 0.2s ease;
+}
+
+.shop-filter-bar .filter-btn:hover,
+.shop-filter-bar .filter-btn.active {
+  color: #1C1C1C;
+  border-bottom-color: #C9A96E;
+}
+
+.product-col.hidden {
+  display: none !important;
+}
+
+/* --- Service cards -------------------------------------------------- */
+.service-card {
+  background: #FFFFFF;
+  border-radius: 6px;
+  padding: 2.5rem 2rem;
+  height: 100%;
+  border: 1px solid #EDE8E0;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.service-card:hover {
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.08);
+  transform: translateY(-5px);
+}
+
+.service-card .svc-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 2px;
+  background: #FAF8F5;
+  border: 1px solid #EDE8E0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #C9A96E;
+}
+
+.service-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: #1C1C1C;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 14px;
+  line-height: 1.75;
+  color: #7A7A72;
+  margin-bottom: 0;
+}
+
+/* --- Blog: image zoom + Read-more overlay --------------------------- */
+.post-entry .post-thumbnail {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.post-entry .post-thumbnail img {
+  transition: transform 0.55s ease !important;
+  display: block;
+}
+
+.post-entry:hover .post-thumbnail img {
+  transform: scale(1.06) !important;
+}
+
+.post-thumbnail .read-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(17, 17, 16, 0.38);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 4px;
+}
+
+.post-entry:hover .read-overlay {
+  opacity: 1;
+}
+
+.read-overlay span {
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.65);
+  padding: 9px 22px;
+  border-radius: 2px;
+}
+
+/* --- Blog: read-time tag -------------------------------------------- */
+.read-time {
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #C9A96E;
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* --- About: values strip -------------------------------------------- */
+.values-strip {
+  background: #1C1C1C;
+  padding: 4rem 0;
+}
+
+.values-strip .value-item {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  border-right: 1px solid rgba(255,255,255,0.07);
+}
+
+.values-strip .value-item:last-child { border-right: none; }
+
+.values-strip .value-icon {
+  font-size: 26px;
+  color: #C9A96E;
+  margin-bottom: 14px;
+  display: block;
+}
+
+.values-strip .value-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.values-strip .value-desc {
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: rgba(255,255,255,0.4);
+  line-height: 1.6;
+}
+
+/* --- About: team grid ---------------------------------------------- */
+.team-section { padding: 7rem 0; background: #FAF8F5; }
+
+.team-card { text-align: center; }
+
+.team-card img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  display: block;
+  border: 4px solid #EDE8E0;
+  transition: border-color 0.3s ease;
+}
+
+.team-card:hover img { border-color: #C9A96E; }
+
+.team-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: #1C1C1C;
+  margin-bottom: 4px;
+}
+
+.team-card .team-role {
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #C9A96E;
+  font-weight: 700;
+}
+
+/* --- Hero inner: page-specific eyebrow ----------------------------- */
+.hero.hero-inner .eyebrow {
+  color: rgba(201, 169, 110, 0.85);
+}
+
