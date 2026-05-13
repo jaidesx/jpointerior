@@ -4,7 +4,7 @@
 * Author URI: https://untree.co/
 * License: https://creativecommons.org/licenses/by/3.0/
 */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap");
 body {
   overflow-x: hidden;
   position: relative; }
@@ -908,5 +908,574 @@ textarea {
 /* Subtle badge-style category tag on each card */
 .product-section .product-item .product-thumbnail::before {
   display: none; /* prevent any inherited pseudo conflict */
+}
+
+/* =======================================================================
+   MODERN INTERIOR — WARM LUXURY REDESIGN
+   ======================================================================= */
+
+/* --- 1. Global Typography: Playfair Display for all headings --- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* --- 2. Body: warm cream background ---------------------------- */
+body {
+  background-color: #FAF8F5 !important;
+}
+
+/* --- 3. Sticky navbar with backdrop blur ----------------------- */
+.custom-navbar {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1030 !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(40, 64, 54, 0.97) !important;
+  padding-top: 16px !important;
+  padding-bottom: 16px !important;
+  box-shadow: 0 1px 20px rgba(0, 0, 0, 0.18);
+}
+
+.custom-navbar .navbar-brand {
+  font-family: 'Playfair Display', serif !important;
+  font-size: 20px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.custom-navbar .custom-navbar-nav li a {
+  font-size: 10.5px !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase;
+  font-weight: 600 !important;
+}
+
+/* --- 4. Hero: dramatic full-height with gradient --------------- */
+.hero {
+  background: linear-gradient(140deg, #3b5d50 0%, #2a4338 55%, #1b2e24 100%) !important;
+  min-height: 88vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif !important;
+  font-size: 52px !important;
+  font-weight: 700;
+  line-height: 1.1 !important;
+  letter-spacing: -0.02em;
+  margin-bottom: 28px;
+}
+
+@media (min-width: 1200px) {
+  .hero h1 {
+    font-size: 72px !important;
+  }
+}
+
+.hero p {
+  font-size: 16px !important;
+  line-height: 1.8 !important;
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* --- 5. Buttons: sharp minimal, uppercase, gold secondary ------ */
+.btn {
+  border-radius: 2px !important;
+  font-size: 10.5px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 14px 36px !important;
+  transition: all 0.25s ease !important;
+}
+
+.btn.btn-secondary {
+  background: #C9A96E !important;
+  border-color: #C9A96E !important;
+  color: #fff !important;
+}
+
+.btn.btn-secondary:hover {
+  background: #b8956a !important;
+  border-color: #b8956a !important;
+}
+
+.btn.btn-white-outline {
+  border-radius: 2px !important;
+  border-width: 1px !important;
+}
+
+.btn.btn-primary {
+  background: #3b5d50 !important;
+  border-color: #3b5d50 !important;
+}
+
+.btn.btn-primary:hover {
+  background: #2e4a3f !important;
+  border-color: #2e4a3f !important;
+}
+
+/* --- 6. Section titles: large elegant serif -------------------- */
+.section-title {
+  font-family: 'Playfair Display', serif !important;
+  font-size: 38px !important;
+  line-height: 1.15 !important;
+  color: #1C1C1C !important;
+  letter-spacing: -0.01em;
+}
+
+@media (min-width: 992px) {
+  .section-title {
+    font-size: 46px !important;
+  }
+}
+
+/* --- 7. Product Section: white cards with clean hover ---------- */
+.product-section {
+  background: #FAF8F5;
+}
+
+.product-section .product-item {
+  background: #FFFFFF;
+  border-radius: 6px !important;
+  overflow: hidden !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.35s ease, transform 0.35s ease !important;
+  padding-bottom: 20px !important;
+}
+
+.product-section .product-item:hover {
+  box-shadow: 0 20px 52px rgba(0, 0, 0, 0.13) !important;
+  transform: translateY(-6px);
+}
+
+.product-section .product-item:before {
+  display: none !important;
+}
+
+.product-section .product-item .product-thumbnail {
+  border-radius: 6px 6px 0 0 !important;
+  margin-bottom: 14px !important;
+  top: 0 !important;
+}
+
+.product-section .product-item:hover .product-thumbnail {
+  transform: scale(1.04) !important;
+  top: 0 !important;
+}
+
+.product-section .product-item h3.product-title {
+  font-family: 'Playfair Display', serif !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  color: #1C1C1C !important;
+  padding: 0 16px !important;
+  white-space: normal !important;
+  letter-spacing: 0 !important;
+  line-height: 1.45;
+}
+
+.product-section .product-item:hover h3.product-title {
+  color: #3b5d50 !important;
+}
+
+.product-section .product-item .icon-cross {
+  background: #C9A96E !important;
+  width: 42px !important;
+  height: 42px !important;
+  bottom: 14px !important;
+}
+
+/* --- 8. Why Choose Us: white background ------------------------ */
+.why-choose-section {
+  background: #FFFFFF;
+}
+
+.feature h3 {
+  font-family: 'Playfair Display', serif !important;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1C1C1C;
+}
+
+.feature .icon:before {
+  background: rgba(201, 169, 110, 0.15) !important;
+}
+
+/* --- 9. We Help Section: cream background ---------------------- */
+.we-help-section {
+  background: #FAF8F5;
+}
+
+.custom-list li:before {
+  border-color: #C9A96E !important;
+}
+
+/* --- 10. Popular Products: white background -------------------- */
+.popular-product {
+  background: #FFFFFF;
+  padding: 7rem 0 !important;
+}
+
+.popular-product .product-item-sm h3 {
+  font-family: 'Playfair Display', serif !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  color: #1C1C1C !important;
+}
+
+.popular-product .product-item-sm .thumbnail:before {
+  background: #EDE8E0 !important;
+}
+
+.popular-product .product-item-sm a {
+  color: #3b5d50 !important;
+}
+
+/* --- 11. Testimonials: cream background, italic serif quote ---- */
+.testimonial-section {
+  background: #FAF8F5;
+}
+
+.testimonial-slider-wrap .item .testimonial-block blockquote p {
+  font-family: 'Playfair Display', serif !important;
+  font-style: italic;
+  font-size: 18px !important;
+  line-height: 1.85 !important;
+  color: #1C1C1C;
+}
+
+.testimonial-slider-wrap .item .testimonial-block .author-info h3 {
+  font-family: 'Playfair Display', serif !important;
+  font-size: 15px !important;
+}
+
+.testimonial-slider-wrap #testimonial-nav > span:hover {
+  background: #C9A96E !important;
+  color: #fff !important;
+}
+
+.testimonial-slider-wrap .tns-nav button.tns-nav-active:before,
+.testimonial-slider-wrap .tns-nav button:hover:before {
+  background-color: #C9A96E !important;
+}
+
+/* --- 12. Blog: white background, serif headings ---------------- */
+.blog-section {
+  background: #FFFFFF;
+  padding: 7rem 0 !important;
+}
+
+.blog-section .post-entry .post-content-entry h3 {
+  font-family: 'Playfair Display', serif !important;
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  color: #1C1C1C;
+  white-space: normal;
+  line-height: 1.4;
+}
+
+.blog-section .post-entry .post-thumbnail img {
+  border-radius: 4px !important;
+}
+
+.blog-section .post-entry .post-content-entry .meta a {
+  color: #3b5d50 !important;
+}
+
+a.more {
+  color: #1C1C1C !important;
+  text-decoration: none !important;
+  font-size: 10.5px !important;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 700 !important;
+  border-bottom: 2px solid #C9A96E;
+  padding-bottom: 3px;
+  transition: border-color 0.2s ease !important;
+}
+
+a.more:hover {
+  border-color: #3b5d50 !important;
+  color: #3b5d50 !important;
+}
+
+/* --- 13. Footer: dark charcoal luxury -------------------------- */
+.footer-section {
+  background: #111110 !important;
+}
+
+.footer-section p {
+  color: rgba(255, 255, 255, 0.45) !important;
+}
+
+.footer-section a {
+  color: rgba(255, 255, 255, 0.5) !important;
+  text-decoration: none !important;
+}
+
+.footer-section a:hover {
+  color: #C9A96E !important;
+}
+
+.footer-section .footer-logo-wrap .footer-logo {
+  font-family: 'Playfair Display', serif !important;
+  color: #FFFFFF !important;
+  font-size: 28px !important;
+  text-decoration: none !important;
+}
+
+.footer-section .footer-logo-wrap .footer-logo span {
+  color: #C9A96E;
+  opacity: 1 !important;
+}
+
+.footer-section .subscription-form h3 {
+  color: #FFFFFF !important;
+  font-family: 'Playfair Display', serif !important;
+  font-size: 20px !important;
+}
+
+.footer-section .subscription-form .form-control {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  color: #fff !important;
+  border-radius: 2px !important;
+}
+
+.footer-section .subscription-form .form-control::-webkit-input-placeholder { color: rgba(255,255,255,0.28) !important; }
+.footer-section .subscription-form .form-control::-moz-placeholder           { color: rgba(255,255,255,0.28) !important; }
+.footer-section .subscription-form .form-control:-ms-input-placeholder        { color: rgba(255,255,255,0.28) !important; }
+
+.footer-section .subscription-form .form-control:focus {
+  border-color: #C9A96E !important;
+  box-shadow: none !important;
+}
+
+.footer-section .subscription-form .btn {
+  border-radius: 2px !important;
+  background: #C9A96E !important;
+  border-color: #C9A96E !important;
+}
+
+.footer-section .subscription-form .btn:hover {
+  background: #b8956a !important;
+  border-color: #b8956a !important;
+}
+
+.footer-section .custom-social li a {
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: rgba(255, 255, 255, 0.55) !important;
+  border-radius: 2px !important;
+}
+
+.footer-section .custom-social li a:hover {
+  background: #C9A96E !important;
+  color: #fff !important;
+}
+
+.footer-section .border-top {
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.footer-section .border-top.copyright p,
+.footer-section .border-top.copyright a {
+  color: rgba(255, 255, 255, 0.28) !important;
+  font-size: 12px !important;
+}
+
+.footer-section .border-top.copyright a:hover {
+  color: rgba(255, 255, 255, 0.65) !important;
+}
+
+.footer-section .sofa-img img {
+  opacity: 0.05;
+}
+
+/* --- 14. Text primary color override --------------------------- */
+.text-primary {
+  color: #C9A96E !important;
+}
+
+/* --- 15. Contact / form pages ---------------------------------- */
+.form-control:focus {
+  border-color: #C9A96E !important;
+}
+
+/* --- 16. Service icon ------------------------------------------ */
+.service .service-icon {
+  background: #C9A96E !important;
+  border-radius: 2px !important;
+}
+
+/* --- 17. Thank you icon ---------------------------------------- */
+.thankyou-icon {
+  color: #C9A96E !important;
+}
+
+.thankyou-icon:before {
+  background: rgba(201, 169, 110, 0.15) !important;
+}
+
+/* --- 18. Cart / checkout table accent -------------------------- */
+.site-blocks-table tbody tr:first-child td {
+  border-top-color: #C9A96E !important;
+}
+
+/* --- 19. Smooth scroll --------------------------------------------- */
+html {
+  scroll-behavior: smooth;
+}
+
+/* --- 20. Inner page hero: slim elegant banner ----------------------- */
+.hero.hero-inner {
+  min-height: 52vh !important;
+  padding: calc(5rem - 16px) 0 5rem 0 !important;
+}
+
+.hero.hero-inner h1 {
+  font-size: 48px !important;
+}
+
+@media (min-width: 1200px) {
+  .hero.hero-inner h1 {
+    font-size: 62px !important;
+  }
+}
+
+/* --- 21. Eyebrow label above section titles ------------------------- */
+.eyebrow {
+  display: block;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #C9A96E;
+  margin-bottom: 14px;
+}
+
+/* --- 22. Stats bar -------------------------------------------------- */
+.stats-bar {
+  background: #1C1C1C;
+  padding: 4rem 0;
+}
+
+.stats-bar .stat-item {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.stats-bar .stat-item:last-child {
+  border-right: none;
+}
+
+.stats-bar .stat-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 52px;
+  font-weight: 700;
+  color: #C9A96E;
+  line-height: 1;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.stats-bar .stat-label {
+  font-size: 10.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.42);
+  font-weight: 600;
+}
+
+@media (max-width: 767px) {
+  .stats-bar .stat-item {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  }
+  .stats-bar .stat-item:last-child {
+    border-bottom: none;
+  }
+  .stats-bar .stat-number {
+    font-size: 40px;
+  }
+}
+
+/* --- 23. Feature / Collection banner -------------------------------- */
+.feature-banner {
+  position: relative;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: #111110;
+}
+
+.feature-banner .banner-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  transition: transform 0.7s ease;
+}
+
+.feature-banner:hover .banner-bg {
+  transform: scale(1.04);
+}
+
+.feature-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(17, 17, 16, 0.9) 38%, rgba(17, 17, 16, 0.3) 100%);
+  z-index: 1;
+}
+
+.feature-banner .banner-content {
+  position: relative;
+  z-index: 2;
+  padding: 5rem 0;
+}
+
+.feature-banner .banner-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+@media (min-width: 992px) {
+  .feature-banner .banner-content h2 {
+    font-size: 58px;
+  }
+}
+
+.feature-banner .banner-content p {
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 15px;
+  line-height: 1.8;
+  max-width: 440px;
+  margin-bottom: 32px;
+}
+
+/* --- 24. Blog card image consistent height -------------------------- */
+.post-entry .post-thumbnail img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* --- 25. Nav logo image size fix ------------------------------------ */
+.custom-navbar .navbar-brand img {
+  height: 42px !important;
+  width: auto;
+  border-radius: 6px;
 }
 
