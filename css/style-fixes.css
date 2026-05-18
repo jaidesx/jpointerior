@@ -1,0 +1,80 @@
+/*
+ * style-fixes.css
+ * Targeted corrections for JPO Interior — load AFTER style.css
+ * Each fix is annotated with the issue it resolves.
+ */
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   FIX 1 — Dead duplicate navbar logo height
+   Original style.css had `height: 80px !important` early on, then
+   `height: 42px !important` later (which won). The 80px rule was dead code
+   causing confusion. We consolidate here with a single canonical value.
+   ───────────────────────────────────────────────────────────────────────── */
+.custom-navbar .navbar-brand img {
+  height: 42px !important;
+  width: auto;
+  border-radius: 6px;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   FIX 2 — Undefined .btn-primary-hover-outline class
+   contact.html used this class on the Send Message button but it was never
+   defined in style.css. Now defined as a green outlined button that fills
+   on hover, matching the site's primary brand colour.
+   ───────────────────────────────────────────────────────────────────────── */
+.btn-primary-hover-outline {
+  background: transparent;
+  border: 2px solid #3b5d50;
+  color: #3b5d50;
+  font-weight: 700;
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 14px 36px;
+  border-radius: 2px;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+.btn-primary-hover-outline:hover,
+.btn-primary-hover-outline:focus {
+  background: #3b5d50;
+  color: #ffffff;
+  border-color: #3b5d50;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   FIX 3 — Conflicting hover effects on .product-item
+   style.css had TWO hover transforms that fired together:
+     a) The older `.product-item:hover .product-thumbnail { top: -25px; }`
+        which uses position offset.
+     b) The newer luxury redesign:
+        `.product-section .product-item:hover .product-thumbnail { transform: scale(1.04); top: 0 !important; }`
+        which uses transform and resets top to 0.
+   These conflict and produce a jarring jump. We consolidate into a single
+   clean transform-based hover with no top offset.
+   ───────────────────────────────────────────────────────────────────────── */
+.product-section .product-item .product-thumbnail {
+  top: 0 !important;
+  transition: transform 0.35s ease, box-shadow 0.35s ease !important;
+}
+.product-section .product-item:hover .product-thumbnail {
+  transform: scale(1.04) !important;
+  top: 0 !important;
+  box-shadow: 0 12px 36px rgba(59, 93, 80, 0.18) !important;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   FIX 4 — .position Bootstrap utility class conflict on About team section
+   about.html uses <span class="position d-block mb-3"> for team member roles,
+   but Bootstrap's .position utility sets `position: relative` which overrides
+   any custom styles. We use a more specific selector to target only team cards.
+   ───────────────────────────────────────────────────────────────────────── */
+.team-card span.position {
+  position: static !important;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #C9A96E;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.75rem;
+}

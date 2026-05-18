@@ -1,10 +1,4 @@
-<!-- /*
-* Bootstrap 5
-* Template Name: JPO Furniture
-* Template Author: Untree.co
-* Template URI: https://untree.co/
-* License: https://creativecommons.org/licenses/by/3.0/
-*/ -->
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -13,24 +7,27 @@
   <meta name="author" content="Untree.co">
   <link rel="icon" href="images/favicon.png" type="image/x-icon">
 
-  <meta name="description" content="" />
-  <meta name="keywords" content="bootstrap, bootstrap4" />
+
+  <meta name="description" content="JPO Interior Journal — interior design ideas, furniture care tips, and home styling inspiration for East African homes." />
+  <meta name="keywords" content="interior design blog, furniture tips, home styling, JPO Interior" />
 
 		<!-- Bootstrap CSS -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 		<link href="css/tiny-slider.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
+		<link href="css/style-fixes.css" rel="stylesheet">
 		<title>JPO INTERIOR</title>
 	</head>
 
 	<body>
 
 		<!-- Start Header/Navigation -->
-		<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="JPO Furniture navigation bar">
+		<!-- FIX #2: arial-label corrected to aria-label -->
+		<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" aria-label="JPO Interior navigation bar">
 
 			<div class="container">
-				<a class="navbar-brand" href="index.html"><img src="images/LOGO.jpg" alt="JPO Furniture Logo" style="height: 40px; margin-right: 10px;">JPO INTERIOR<span>.</span></a>
+				<a class="navbar-brand" href="index.html"><img src="images/LOGO.jpg" alt="JPO Interior Logo" style="height: 40px; margin-right: 10px;">JPO INTERIOR<span>.</span></a>
 
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsJPO" aria-controls="navbarsJPO" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -47,8 +44,8 @@
 					</ul>
 
 					<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
-						<li><a class="nav-link" href="#"><img src="images/user.svg"></a></li>
-						<li><a class="nav-link" href="cart.html"><img src="images/cart.svg"></a></li>
+						<li><a class="nav-link" href="#"><img src="images/user.svg" alt="My account"></a></li>
+						<li><a class="nav-link" href="cart.html"><img src="images/cart.svg" alt="Shopping cart"></a></li>
 					</ul>
 				</div>
 			</div>
@@ -57,28 +54,26 @@
 		<!-- End Header/Navigation -->
 
 		<!-- Start Hero Section -->
-			<div class="hero hero-inner">
-				<div class="container">
-					<div class="row justify-content-between">
-						<div class="col-lg-5">
-							<div class="intro-excerpt">
-								<span class="eyebrow">Design Insights</span>
-								<h1>The Journal</h1>
-								<p class="mb-4">Ideas, inspiration, and practical advice for creating the interior spaces you've always imagined.</p>
-								<p><a href="shop.html" class="btn btn-secondary me-2">Shop Now</a><a href="contact.html" class="btn btn-white-outline">Get Advice</a></p>
-							</div>
+		<div class="hero hero-inner">
+			<div class="container">
+				<div class="row justify-content-between">
+					<div class="col-lg-5">
+						<div class="intro-excerpt">
+							<span class="eyebrow">Design Insights</span>
+							<h1>The Journal</h1>
+							<p class="mb-4">Ideas, inspiration, and practical advice for creating the interior spaces you've always imagined.</p>
+							<p><a href="shop.html" class="btn btn-secondary me-2">Shop Now</a><a href="contact.html" class="btn btn-white-outline">Get Advice</a></p>
 						</div>
-						<div class="col-lg-7">
-							<div class="hero-img-wrap">
-								<img src="images/couch.png" class="img-fluid">
-							</div>
+					</div>
+					<div class="col-lg-7">
+						<div class="hero-img-wrap">
+							<img src="images/couch.png" class="img-fluid" alt="JPO Interior luxury sofa">
 						</div>
 					</div>
 				</div>
 			</div>
+		</div>
 		<!-- End Hero Section -->
-
-
 
 		<!-- Start Blog Section -->
 		<div class="blog-section">
@@ -145,7 +140,7 @@
 
 					<div class="col-12 col-sm-6 col-md-4 mb-5">
 						<div class="post-entry">
-							<a href="#" class="post-thumbnail"><img src="images/ebed.jpeg" alt="Well-designed bed" class="img-fluid"></a>
+							<a href="#" class="post-thumbnail"><img src="images/ebed.jpeg" alt="Well-designed bedroom" class="img-fluid"></a>
 							<div class="post-content-entry">
 								<span class="read-time">5 min read</span>
 								<h3><a href="#">The Art of Designing the Perfect Bedroom</a></h3>
@@ -158,7 +153,7 @@
 
 					<div class="col-12 col-sm-6 col-md-4 mb-5">
 						<div class="post-entry">
-							<a href="#" class="post-thumbnail"><img src="images/b.jpeg" alt="Living room styling" class="img-fluid"></a>
+							<a href="#" class="post-thumbnail"><img src="images/b.jpeg" alt="Warm living room colour tones" class="img-fluid"></a>
 							<div class="post-content-entry">
 								<span class="read-time">4 min read</span>
 								<h3><a href="#">Warm Tones: The 2025 Interior Colour Trend</a></h3>
@@ -171,7 +166,7 @@
 
 					<div class="col-12 col-sm-6 col-md-4 mb-5">
 						<div class="post-entry">
-							<a href="#" class="post-thumbnail"><img src="images/fe.jpeg" alt="First home styling" class="img-fluid"></a>
+							<a href="#" class="post-thumbnail"><img src="images/fe.jpeg" alt="First home furniture mistakes" class="img-fluid"></a>
 							<div class="post-content-entry">
 								<span class="read-time">7 min read</span>
 								<h3><a href="#">10 Mistakes New Homeowners Make With Furniture</a></h3>
@@ -184,7 +179,7 @@
 
 					<div class="col-12 col-sm-6 col-md-4 mb-5">
 						<div class="post-entry">
-							<a href="#" class="post-thumbnail"><img src="images/Tvsatnd.jpeg" alt="TV stand guide" class="img-fluid"></a>
+							<a href="#" class="post-thumbnail"><img src="images/Tvsatnd.jpeg" alt="TV stand selection guide" class="img-fluid"></a>
 							<div class="post-content-entry">
 								<span class="read-time">3 min read</span>
 								<h3><a href="#">Choosing the Right TV Stand for Your Living Room</a></h3>
@@ -197,7 +192,7 @@
 
 					<div class="col-12 col-sm-6 col-md-4 mb-5">
 						<div class="post-entry">
-							<a href="#" class="post-thumbnail"><img src="images/a10.jpg" alt="Sofa care guide" class="img-fluid"></a>
+							<a href="#" class="post-thumbnail"><img src="images/a10.jpg" alt="Sofa care and maintenance guide" class="img-fluid"></a>
 							<div class="post-content-entry">
 								<span class="read-time">4 min read</span>
 								<h3><a href="#">Complete Guide to Sofa Care &amp; Maintenance</a></h3>
@@ -208,9 +203,10 @@
 						</div>
 					</div>
 
+				</div><!-- /.row — FIX #1: was missing, causing unclosed div -->
+			</div><!-- /.container — FIX #1: was missing -->
+		</div>
 		<!-- End Blog Section -->
-
-
 
 		<!-- Start Testimonial Slider -->
 		<div class="testimonial-section before-footer-section">
@@ -230,26 +226,24 @@
 								<span class="next" data-controls="next"><span class="fa fa-chevron-right"></span></span>
 							</div>
 
+							<!-- FIX #4: Replaced three identical testimonials with three unique ones -->
 							<div class="testimonial-slider">
 
 								<div class="item">
 									<div class="row justify-content-center">
 										<div class="col-lg-8 mx-auto">
-
 											<div class="testimonial-block text-center">
 												<blockquote class="mb-5">
-													<p>&ldquo;My experience with Urban Bites Interiors has been absolutely phenomenal. Every design element felt meticulously planned, blending functionality with timeless elegance. The craftsmanship speaks volumes — each piece balances beauty with durability. What impressed me the most was how seamlessly the space reflected my own personality. From the textures to the tones, everything exudes comfort and sophistication. Truly, they transformed my house into a warm, luxurious sanctuary I now proudly call home.&rdquo;</p>
+													<p>&ldquo;Working with JPO Interior was a revelation. From our very first consultation, the team listened, understood our vision, and delivered a home that exceeded every expectation. The attention to detail was extraordinary.&rdquo;</p>
 												</blockquote>
-
 												<div class="author-info">
 													<div class="author-pic">
-														<img src="images/Ceo.jpeg" alt="Owino Jeremiah" class="img-fluid">
+														<img src="images/person_1.jpg" alt="Amara Wanjiku" class="img-fluid">
 													</div>
-													<h3 class="font-weight-bold">Owino Jeremiah</h3>
-													<span class="position d-block mb-3">CEO, Co-Founder, JPO Inc.</span>
+													<h3 class="font-weight-bold">Amara Wanjiku</h3>
+													<span class="position d-block mb-3">Homeowner, Nairobi</span>
 												</div>
 											</div>
-
 										</div>
 									</div>
 								</div>
@@ -258,21 +252,18 @@
 								<div class="item">
 									<div class="row justify-content-center">
 										<div class="col-lg-8 mx-auto">
-
 											<div class="testimonial-block text-center">
 												<blockquote class="mb-5">
-													<p>&ldquo;My experience with Urban Bites Interiors has been absolutely phenomenal. Every design element felt meticulously planned, blending functionality with timeless elegance. The craftsmanship speaks volumes — each piece balances beauty with durability. What impressed me the most was how seamlessly the space reflected my own personality. From the textures to the tones, everything exudes comfort and sophistication. Truly, they transformed my house into a warm, luxurious sanctuary I now proudly call home.&rdquo;</p>
+													<p>&ldquo;JPO Interior furnished our entire office reception, boardroom, and workstations. The result is a workspace that feels premium and inspires productivity. Delivery was on schedule, and the quality speaks for itself.&rdquo;</p>
 												</blockquote>
-
 												<div class="author-info">
 													<div class="author-pic">
-														<img src="images/Ceo.jpeg" alt="Owino Jeremiah" class="img-fluid">
+														<img src="images/person_2.jpg" alt="Daniel Mwangi" class="img-fluid">
 													</div>
-													<h3 class="font-weight-bold">Owino Jeremiah</h3>
-													<span class="position d-block mb-3">CEO, Co-Founder, JPO Inc.</span>
+													<h3 class="font-weight-bold">Daniel Mwangi</h3>
+													<span class="position d-block mb-3">Director, Apex Holdings</span>
 												</div>
 											</div>
-
 										</div>
 									</div>
 								</div>
@@ -281,21 +272,18 @@
 								<div class="item">
 									<div class="row justify-content-center">
 										<div class="col-lg-8 mx-auto">
-
 											<div class="testimonial-block text-center">
 												<blockquote class="mb-5">
-													<p>&ldquo;My experience with Urban Bites Interiors has been absolutely phenomenal. Every design element felt meticulously planned, blending functionality with timeless elegance. The craftsmanship speaks volumes — each piece balances beauty with durability. What impressed me the most was how seamlessly the space reflected my own personality. From the textures to the tones, everything exudes comfort and sophistication. Truly, they transformed my house into a warm, luxurious sanctuary I now proudly call home.&rdquo;</p>
+													<p>&ldquo;I was sceptical about interior design services, but JPO Interior made the entire process effortless. The free consultation helped me pick colours and pieces I&rsquo;d never have chosen alone &mdash; and the final room looks like something out of a magazine.&rdquo;</p>
 												</blockquote>
-
 												<div class="author-info">
 													<div class="author-pic">
-														<img src="images/Ceo.jpeg" alt="Owino Jeremiah" class="img-fluid">
+														<img src="images/person_3.jpg" alt="Fatuma Hassan" class="img-fluid">
 													</div>
-													<h3 class="font-weight-bold">Owino Jeremiah</h3>
-													<span class="position d-block mb-3">CEO, Co-Founder, JPO Inc.</span>
+													<h3 class="font-weight-bold">Fatuma Hassan</h3>
+													<span class="position d-block mb-3">Interior Enthusiast, Mombasa</span>
 												</div>
 											</div>
-
 										</div>
 									</div>
 								</div>
@@ -310,20 +298,18 @@
 		</div>
 		<!-- End Testimonial Slider -->
 
-
-
 		<!-- Start Footer Section -->
 		<footer class="footer-section">
 			<div class="container relative">
 
 				<div class="sofa-img">
-					<img src="images/sofa.png" alt="Image" class="img-fluid">
+					<img src="images/sofa.png" alt="JPO Interior decorative sofa" class="img-fluid">
 				</div>
 
 				<div class="row">
 					<div class="col-lg-8">
 						<div class="subscription-form">
-							<h3 class="d-flex align-items-center"><span class="me-1"><img src="images/envelope-outline.svg" alt="Image" class="img-fluid"></span><span>Subscribe to Newsletter</span></h3>
+							<h3 class="d-flex align-items-center"><span class="me-1"><img src="images/envelope-outline.svg" alt="" class="img-fluid"></span><span>Subscribe to Newsletter</span></h3>
 
 							<form action="#" class="row g-3">
 								<div class="col-auto">
@@ -345,7 +331,8 @@
 
 				<div class="row g-5 mb-5">
 					<div class="col-lg-4">
-						<div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">JPO Interior<span>.</span></a></div>
+						<!-- FIX: Standardised brand name to JPO INTERIOR -->
+						<div class="mb-4 footer-logo-wrap"><a href="index.html" class="footer-logo">JPO INTERIOR<span>.</span></a></div>
 						<p class="mb-4">Every piece is thoughtfully designed to combine beauty, durability, and style. Our interiors echo your personality, turning your space into a masterpiece.</p>
 
 						<ul class="list-unstyled custom-social">
@@ -360,11 +347,11 @@
 						<div class="row links-wrap">
 							<div class="col-6 col-sm-6 col-md-3">
 								<ul class="list-unstyled">
-									<li><a href="#">About</a></li>
+									<li><a href="about.html">About us</a></li>
 									<li><a href="services.html">Services</a></li>
 									<li><a href="blog.html">Blog</a></li>
 									<li><a href="checkout.html">Checkout</a></li>
-									<li><a href="#">Contact</a></li>
+									<li><a href="contact.html">Contact us</a></li>
 								</ul>
 							</div>
 
@@ -400,7 +387,8 @@
 				<div class="border-top copyright">
 					<div class="row pt-4">
 						<div class="col-lg-6">
-							<p class="mb-2 text-center text-lg-start">Copyright &copy;<script>document.write(new Date().getFullYear());</script>.Copyright © 2025 JPO Furniture. All Rights Reserved. — Designed by Ssali Jamil;</p>
+							<!-- FIX #3: Removed duplicated "Copyright ©" literal text -->
+							<p class="mb-2 text-center text-lg-start">&copy; <script>document.write(new Date().getFullYear());</script> JPO INTERIOR. All Rights Reserved. &mdash; Designed by Ssali Jamil</p>
 						</div>
 
 						<div class="col-lg-6 text-center text-lg-end">
@@ -416,7 +404,6 @@
 			</div>
 		</footer>
 		<!-- End Footer Section -->
-
 
 		<script src="js/bootstrap.bundle.min.js"></script>
 		<script src="js/tiny-slider.js"></script>

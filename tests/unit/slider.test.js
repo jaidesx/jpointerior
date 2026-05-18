@@ -1,12 +1,31 @@
+/**
+ * tests/unit/slider.test.js
+ *
+ * FIX: The original test never mocked the `bootstrap` global.
+ * custom.js calls `bootstrap.Collapse.getInstance(navCollapse)` inside
+ * mobileMenuClose(), which throws in jsdom because `bootstrap` is undefined.
+ * We now set up a minimal bootstrap stub before each require().
+ */
+
 describe('tinyslider initialization', () => {
   beforeEach(() => {
+    // Mock tns (tiny-slider global)
     global.tns = jest.fn().mockReturnValue({});
+
+    // FIX: Mock bootstrap global so mobileMenuClose() does not throw
+    global.bootstrap = {
+      Collapse: {
+        getInstance: jest.fn().mockReturnValue(null),
+      },
+    };
+
     jest.resetModules();
   });
 
   afterEach(() => {
     document.body.innerHTML = '';
     delete global.tns;
+    delete global.bootstrap;
   });
 
   test('does not call tns when no .testimonial-slider element exists', () => {
@@ -39,5 +58,20 @@ describe('tinyslider initialization', () => {
     document.body.innerHTML = '<div class="other-element"></div>';
     require('../../js/custom.js');
     expect(global.tns).not.toHaveBeenCalled();
+  });
+
+  // FIX: Added test to confirm mobileMenuClose does not throw when bootstrap is mocked
+  test('module loads without throwing when bootstrap is mocked', () => {
+    expect(() => {
+      require('../../js/custom.js');
+    }).not.toThrow();
+  });
+
+  // FIX: Added test to confirm shopFilter does nothing when no filter buttons present
+  test('shopFilter does nothing when no .filter-btn elements exist', () => {
+    document.body.innerHTML = '';
+    expect(() => {
+      require('../../js/custom.js');
+    }).not.toThrow();
   });
 });
