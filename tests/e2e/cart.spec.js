@@ -1,9 +1,32 @@
 const { test, expect } = require('@playwright/test');
 
+const TEST_CART_ITEMS = [
+  {
+    id: 'cabinet-001',
+    name: 'Classic Wooden Kitchen Cabinet Set',
+    price: 2800,
+    image: 'images/classic-wooden-kitchen-cabinet-set.jpeg',
+    quantity: 1
+  },
+  {
+    id: 'chair-armchair-001',
+    name: 'Modern Grey Accent Armchair',
+    price: 450,
+    image: 'images/modern-grey-accent-armchair.jpg',
+    quantity: 2
+  }
+];
+
+async function gotoWithCart(page, path) {
+  await page.addInitScript((items) => {
+    localStorage.setItem('jpo_cart', JSON.stringify(items));
+  }, TEST_CART_ITEMS);
+  await page.goto(path, { waitUntil: 'domcontentloaded' });
+}
+
 test.describe('Cart page structure', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('/cart.html');
-    await page.waitForLoadState('domcontentloaded');
+    await gotoWithCart(page, '/cart.html');
   });
 
   test('page title is correct', async ({ page }) => {
@@ -30,9 +53,9 @@ test.describe('Cart page structure', () => {
     expect(count).toBeGreaterThan(0);
   });
 
-  test('"Proceed To Checkout" button is visible', async ({ page }) => {
-    const checkoutBtn = page.locator('button', { hasText: 'Proceed To Checkout' });
-    await expect(checkoutBtn).toBeVisible();
+  test('"Proceed To Checkout" link is visible', async ({ page }) => {
+    const checkoutLink = page.locator('a', { hasText: 'Proceed To Checkout' });
+    await expect(checkoutLink).toBeVisible();
   });
 
   test('coupon input field is present', async ({ page }) => {
@@ -42,8 +65,7 @@ test.describe('Cart page structure', () => {
 
 test.describe('Cart quantity controls', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('/cart.html');
-    await page.waitForLoadState('domcontentloaded');
+    await gotoWithCart(page, '/cart.html');
   });
 
   test('each cart row has increase and decrease buttons', async ({ page }) => {
@@ -85,16 +107,16 @@ test.describe('Cart quantity controls', () => {
     expect(after).toBe(before - 1);
   });
 
-  test('decrease does not drop below 0', async ({ page }) => {
+  test('decrease does not drop below 1', async ({ page }) => {
     const firstContainer = page.locator('.quantity-container').first();
     const input = firstContainer.locator('.quantity-amount');
 
-    // Click decrease many times to try to go negative
+    // Click decrease many times to try to go below 1
     for (let i = 0; i < 10; i++) {
       await firstContainer.locator('.decrease').click();
     }
     const value = parseInt(await input.inputValue(), 10);
-    expect(value).toBeGreaterThanOrEqual(0);
+    expect(value).toBeGreaterThanOrEqual(1);
   });
 
   test('two quantity containers are independent', async ({ page }) => {
@@ -106,9 +128,7 @@ test.describe('Cart quantity controls', () => {
       return;
     }
 
-    const input1 = containers.nth(0).locator('.quantity-amount');
     const input2 = containers.nth(1).locator('.quantity-amount');
-
     const initial2 = await input2.inputValue();
 
     await containers.nth(0).locator('.increase').click();
@@ -121,8 +141,7 @@ test.describe('Cart quantity controls', () => {
 
 test.describe('Checkout page structure', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('/checkout.html');
-    await page.waitForLoadState('domcontentloaded');
+    await page.goto('/checkout.html', { waitUntil: 'domcontentloaded' });
   });
 
   test('checkout page loads successfully', async ({ page }) => {
@@ -138,8 +157,7 @@ test.describe('Checkout page structure', () => {
 
 test.describe('Contact page structure', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('/contact.html');
-    await page.waitForLoadState('domcontentloaded');
+    await page.goto('/contact.html', { waitUntil: 'domcontentloaded' });
   });
 
   test('contact form has first name, last name, email and message fields', async ({ page }) => {

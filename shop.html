@@ -35,7 +35,10 @@
         </ul>
         <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
           <li><a class="nav-link" href="#"><img src="images/user.svg" alt="Account"></a></li>
-          <li><a class="nav-link" href="cart.html"><img src="images/cart.svg" alt="Cart"></a></li>
+          <li><a class="nav-link cart-nav-link" href="cart.html" style="position:relative;">
+            <img src="images/cart.svg" alt="Cart">
+            <span class="cart-count-badge" style="display:none;">0</span>
+          </a></li>
         </ul>
       </div>
     </div>
@@ -85,103 +88,143 @@
 
         <!-- Cabinet -->
         <div class="col-12 col-md-4 col-lg-3 mb-5 product-col" data-category="storage">
-          <a class="product-item" href="cart.html">
+          <a class="product-item" href="#">
             <span class="product-badge badge-featured">Featured</span>
             <img src="images/classic-wooden-kitchen-cabinet-set.jpeg" class="img-fluid product-thumbnail" alt="Classic Wooden Kitchen Cabinet Set">
             <h3 class="product-title">Classic Wooden Kitchen Cabinet Set</h3>
             <div class="product-price-wrap">
-              <span class="product-price">$2,800</span>
+              <span class="product-price">UGX 2,800</span>
             </div>
             <span class="icon-cross"><img src="images/cross.svg" class="img-fluid"></span>
           </a>
+          <button class="btn btn-black btn-sm add-to-cart-btn w-100 mt-2"
+                  data-product-id="cabinet-001"
+                  data-product-name="Classic Wooden Kitchen Cabinet Set"
+                  data-product-price="2800"
+                  data-product-image="images/classic-wooden-kitchen-cabinet-set.jpeg">Add to Cart</button>
         </div>
 
         <!-- Emerald Sofa -->
         <div class="col-12 col-md-4 col-lg-3 mb-5 product-col" data-category="sofas">
-          <a class="product-item" href="cart.html">
+          <a class="product-item" href="#">
             <img src="images/emerald-green-velvet-sectional-sofa.jpg" class="img-fluid product-thumbnail" alt="Emerald Green Velvet Sectional Sofa">
             <h3 class="product-title">Emerald Green Velvet Sectional Sofa</h3>
             <div class="product-price-wrap">
-              <span class="product-price">$1,850</span>
+              <span class="product-price">UGX 1,850</span>
             </div>
             <span class="icon-cross"><img src="images/cross.svg" class="img-fluid"></span>
           </a>
+          <button class="btn btn-black btn-sm add-to-cart-btn w-100 mt-2"
+                  data-product-id="sofa-emerald-001"
+                  data-product-name="Emerald Green Velvet Sectional Sofa"
+                  data-product-price="1850"
+                  data-product-image="images/emerald-green-velvet-sectional-sofa.jpg">Add to Cart</button>
         </div>
 
         <!-- Armchair -->
         <div class="col-12 col-md-4 col-lg-3 mb-5 product-col" data-category="chairs">
-          <a class="product-item" href="cart.html">
+          <a class="product-item" href="#">
             <span class="product-badge badge-new">New</span>
             <img src="images/modern-grey-accent-armchair.jpg" class="img-fluid product-thumbnail" alt="Modern Grey Accent Armchair">
             <h3 class="product-title">Modern Grey Accent Armchair</h3>
             <div class="product-price-wrap">
-              <span class="product-price">$450</span>
+              <span class="product-price">UGX 450</span>
             </div>
             <span class="icon-cross"><img src="images/cross.svg" class="img-fluid"></span>
           </a>
+          <button class="btn btn-black btn-sm add-to-cart-btn w-100 mt-2"
+                  data-product-id="chair-armchair-001"
+                  data-product-name="Modern Grey Accent Armchair"
+                  data-product-price="450"
+                  data-product-image="images/modern-grey-accent-armchair.jpg">Add to Cart</button>
         </div>
 
         <!-- Wardrobe -->
         <div class="col-12 col-md-4 col-lg-3 mb-5 product-col" data-category="storage">
-          <a class="product-item" href="cart.html">
+          <a class="product-item" href="#">
             <img src="images/builtin-wooden-wardrobe-shelving-unit.jpg" class="img-fluid product-thumbnail" alt="Built-In Wooden Wardrobe Shelving Unit">
             <h3 class="product-title">Built-In Wooden Wardrobe Shelving Unit</h3>
             <div class="product-price-wrap">
-              <span class="product-price">$3,200</span>
+              <span class="product-price">UGX 3,200</span>
             </div>
             <span class="icon-cross"><img src="images/cross.svg" class="img-fluid"></span>
           </a>
+          <button class="btn btn-black btn-sm add-to-cart-btn w-100 mt-2"
+                  data-product-id="wardrobe-001"
+                  data-product-name="Built-In Wooden Wardrobe Shelving Unit"
+                  data-product-price="3200"
+                  data-product-image="images/builtin-wooden-wardrobe-shelving-unit.jpg">Add to Cart</button>
         </div>
 
         <!-- Dining Set -->
         <div class="col-12 col-md-4 col-lg-3 mb-5 product-col" data-category="dining">
-          <a class="product-item" href="cart.html">
+          <a class="product-item" href="#">
             <span class="product-badge badge-sale">Sale</span>
             <img src="images/classic-oval-dining-table-chair-set.jpeg" class="img-fluid product-thumbnail" alt="Classic Oval Dining Table & Chair Set">
             <h3 class="product-title">Classic Oval Dining Table &amp; Chair Set</h3>
             <div class="product-price-wrap">
-              <span class="product-price">$1,650 <span class="was">$2,100</span></span>
+              <span class="product-price">UGX 1,650 <span class="was">UGX 2,100</span></span>
             </div>
             <span class="icon-cross"><img src="images/cross.svg" class="img-fluid"></span>
           </a>
+          <button class="btn btn-black btn-sm add-to-cart-btn w-100 mt-2"
+                  data-product-id="dining-oval-001"
+                  data-product-name="Classic Oval Dining Table &amp; Chair Set"
+                  data-product-price="1650"
+                  data-product-image="images/classic-oval-dining-table-chair-set.jpeg">Add to Cart</button>
         </div>
 
         <!-- Cream Lounge Sofa -->
         <div class="col-12 col-md-4 col-lg-3 mb-5 product-col" data-category="sofas">
-          <a class="product-item" href="cart.html">
+          <a class="product-item" href="#">
             <img src="images/midcentury-modern-cream-lounge-sofa.jpeg" class="img-fluid product-thumbnail" alt="Mid-Century Modern Cream Lounge Sofa">
             <h3 class="product-title">Mid-Century Modern Cream Lounge Sofa</h3>
             <div class="product-price-wrap">
-              <span class="product-price">$980</span>
+              <span class="product-price">UGX 980</span>
             </div>
             <span class="icon-cross"><img src="images/cross.svg" class="img-fluid"></span>
           </a>
+          <button class="btn btn-black btn-sm add-to-cart-btn w-100 mt-2"
+                  data-product-id="sofa-cream-001"
+                  data-product-name="Mid-Century Modern Cream Lounge Sofa"
+                  data-product-price="980"
+                  data-product-image="images/midcentury-modern-cream-lounge-sofa.jpeg">Add to Cart</button>
         </div>
 
         <!-- Pillows -->
         <div class="col-12 col-md-4 col-lg-3 mb-5 product-col" data-category="accents">
-          <a class="product-item" href="cart.html">
+          <a class="product-item" href="#">
             <span class="product-badge badge-sale">Sale</span>
             <img src="images/luxury-burgundy-geometric-throw-pillows.jpeg" class="img-fluid product-thumbnail" alt="Luxury Burgundy Geometric Throw Pillows">
             <h3 class="product-title">Luxury Burgundy Geometric Throw Pillows</h3>
             <div class="product-price-wrap">
-              <span class="product-price">$65 <span class="was">$95</span></span>
+              <span class="product-price">UGX 65 <span class="was">UGX 95</span></span>
             </div>
             <span class="icon-cross"><img src="images/cross.svg" class="img-fluid"></span>
           </a>
+          <button class="btn btn-black btn-sm add-to-cart-btn w-100 mt-2"
+                  data-product-id="pillows-001"
+                  data-product-name="Luxury Burgundy Geometric Throw Pillows"
+                  data-product-price="65"
+                  data-product-image="images/luxury-burgundy-geometric-throw-pillows.jpeg">Add to Cart</button>
         </div>
 
         <!-- L-Shaped Sofa -->
         <div class="col-12 col-md-4 col-lg-3 mb-5 product-col" data-category="sofas">
-          <a class="product-item" href="cart.html">
+          <a class="product-item" href="#">
             <span class="product-badge badge-new">New</span>
             <img src="images/contemporary-grey-lshaped-corner-sofa.jpg" class="img-fluid product-thumbnail" alt="Contemporary Grey L-Shaped Corner Sofa">
             <h3 class="product-title">Contemporary Grey L-Shaped Corner Sofa</h3>
             <div class="product-price-wrap">
-              <span class="product-price">$2,250</span>
+              <span class="product-price">UGX 2,250</span>
             </div>
             <span class="icon-cross"><img src="images/cross.svg" class="img-fluid"></span>
           </a>
+          <button class="btn btn-black btn-sm add-to-cart-btn w-100 mt-2"
+                  data-product-id="sofa-lshaped-001"
+                  data-product-name="Contemporary Grey L-Shaped Corner Sofa"
+                  data-product-price="2250"
+                  data-product-image="images/contemporary-grey-lshaped-corner-sofa.jpg">Add to Cart</button>
         </div>
 
       </div>
@@ -276,6 +319,7 @@
 
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/tiny-slider.js"></script>
+  <script src="js/cart.js"></script>
   <script src="js/custom.js"></script>
 </body>
 </html>

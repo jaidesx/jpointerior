@@ -83,10 +83,13 @@
     var productCols = document.querySelectorAll('.product-col');
     if (!filterBtns.length || !productCols.length) return;
 
+    filterBtns.forEach(function (btn) { btn.setAttribute('aria-pressed', btn.classList.contains('active') ? 'true' : 'false'); });
+
     filterBtns.forEach(function (btn) {
       btn.addEventListener('click', function () {
-        filterBtns.forEach(function (b) { b.classList.remove('active'); });
+        filterBtns.forEach(function (b) { b.classList.remove('active'); b.setAttribute('aria-pressed', 'false'); });
         btn.classList.add('active');
+        btn.setAttribute('aria-pressed', 'true');
 
         var filter = btn.dataset.filter;
         productCols.forEach(function (col) {

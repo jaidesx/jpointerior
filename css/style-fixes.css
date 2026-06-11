@@ -78,3 +78,64 @@
   display: block;
   margin-bottom: 0.75rem;
 }
+
+/* ── Cart count badge ───────────────────────────────────────────────────────── */
+.cart-count-badge {
+  position: absolute;
+  top: 0;
+  right: -6px;
+  background: #e53935;
+  color: #fff;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+/* ── Add-to-cart button ─────────────────────────────────────────────────────── */
+.add-to-cart-btn {
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.add-to-cart-btn:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+/* ── Quantity number input (type=number — hide browser spinners) ────────────── */
+.quantity-amount {
+  -moz-appearance: textfield;
+}
+.quantity-amount::-webkit-outer-spin-button,
+.quantity-amount::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* ── Checkout: payment method radio group ───────────────────────────────────── */
+.payment-option {
+  border-radius: 4px;
+  transition: border-color 0.2s ease;
+}
+.payment-option:has(input:checked) {
+  border-color: #3b5d50 !important;
+  background: #f5faf8;
+}
+#payment-method-group.payment-invalid .payment-option {
+  border-color: #dc3545 !important;
+}
+#payment-method-group.payment-invalid .payment-invalid-feedback {
+  display: block !important;
+}
+
+/* ── Shop filter buttons: communicate active state to assistive tech ─────────── */
+.shop-filter-bar .filter-btn[aria-pressed="true"],
+.shop-filter-bar .filter-btn.active {
+  color: #1C1C1C;
+  border-bottom-color: #C9A96E;
+}
