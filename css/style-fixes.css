@@ -134,8 +134,116 @@
 }
 
 /* ── Shop filter buttons: communicate active state to assistive tech ─────────── */
+.shop-filter-bar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+.shop-filter-tabs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
 .shop-filter-bar .filter-btn[aria-pressed="true"],
 .shop-filter-bar .filter-btn.active {
   color: #1C1C1C;
   border-bottom-color: #C9A96E;
+}
+
+/* ── Shop search/sort controls ─────────────────────────────────────────────── */
+.shop-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  padding-bottom: 0.6rem;
+}
+.shop-search,
+.shop-sort {
+  position: relative;
+}
+.shop-search .fa {
+  position: absolute;
+  left: 13px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9A9A92;
+  font-size: 12px;
+  pointer-events: none;
+}
+.shop-search .form-control,
+.shop-sort .form-select {
+  height: 42px;
+  border-radius: 4px;
+  border-color: #EDE8E0;
+  color: #1C1C1C;
+  font-size: 14px;
+  min-width: 190px;
+}
+.shop-search .form-control {
+  padding-left: 36px;
+}
+.shop-search .form-control:focus,
+.shop-sort .form-select:focus {
+  border-color: #C9A96E;
+  box-shadow: 0 0 0 0.18rem rgba(201, 169, 110, 0.22);
+}
+.product-result-count {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #7A7A72;
+  white-space: nowrap;
+}
+.shop-empty-state {
+  border: 1px solid #EDE8E0;
+  background: #FFFFFF;
+  border-radius: 6px;
+  padding: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* ── Newsletter feedback ───────────────────────────────────────────────────── */
+.newsletter-message {
+  margin: 0.75rem 0 0;
+  color: #3b5d50;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ── Keyboard focus polish for links/buttons that previously only had hover ── */
+.custom-navbar a:focus-visible,
+.product-item:focus-visible,
+.post-entry a:focus-visible,
+.custom-social a:focus-visible,
+.btn:focus-visible,
+.filter-btn:focus-visible {
+  outline: 3px solid rgba(201, 169, 110, 0.55);
+  outline-offset: 3px;
+}
+
+@media (max-width: 767.98px) {
+  .shop-filter-bar,
+  .shop-controls,
+  .shop-search,
+  .shop-sort,
+  .shop-search .form-control,
+  .shop-sort .form-select {
+    width: 100%;
+  }
+  .shop-filter-tabs {
+    width: 100%;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 0.4rem;
+  }
+  .shop-filter-bar .filter-btn {
+    flex: 0 0 auto;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
 }

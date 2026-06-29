@@ -76,15 +76,39 @@
 
       <!-- Filter Bar -->
       <div class="shop-filter-bar">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="sofas">Sofas</button>
-        <button class="filter-btn" data-filter="chairs">Chairs</button>
-        <button class="filter-btn" data-filter="storage">Storage</button>
-        <button class="filter-btn" data-filter="dining">Dining</button>
-        <button class="filter-btn" data-filter="accents">Accents</button>
+        <div class="shop-filter-tabs" role="group" aria-label="Product categories">
+          <button class="filter-btn active" type="button" data-filter="all">All</button>
+          <button class="filter-btn" type="button" data-filter="sofas">Sofas</button>
+          <button class="filter-btn" type="button" data-filter="chairs">Chairs</button>
+          <button class="filter-btn" type="button" data-filter="storage">Storage</button>
+          <button class="filter-btn" type="button" data-filter="dining">Dining</button>
+          <button class="filter-btn" type="button" data-filter="accents">Accents</button>
+        </div>
+        <div class="shop-controls">
+          <div class="shop-search">
+            <label class="visually-hidden" for="product-search">Search products</label>
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <input id="product-search" class="form-control" type="search" placeholder="Search furniture">
+          </div>
+          <div class="shop-sort">
+            <label class="visually-hidden" for="product-sort">Sort products</label>
+            <select id="product-sort" class="form-select">
+              <option value="featured">Featured</option>
+              <option value="price-asc">Price: low to high</option>
+              <option value="price-desc">Price: high to low</option>
+              <option value="name">Name A-Z</option>
+            </select>
+          </div>
+          <span id="product-result-count" class="product-result-count" aria-live="polite">8 items</span>
+        </div>
       </div>
 
-      <div class="row">
+      <div id="product-empty-state" class="shop-empty-state" style="display:none;">
+        <h2 class="h4 text-black mb-2">No matching pieces found</h2>
+        <p class="mb-0">Try another category or search term.</p>
+      </div>
+
+      <div id="product-grid" class="row">
 
         <!-- Cabinet -->
         <div class="col-12 col-md-4 col-lg-3 mb-5 product-col" data-category="storage">

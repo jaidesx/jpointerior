@@ -74,4 +74,54 @@ describe('tinyslider initialization', () => {
       require('../../js/custom.js');
     }).not.toThrow();
   });
+
+  test('shopFilter search hides non-matching products and updates count', () => {
+    document.body.innerHTML = `
+      <button class="filter-btn active" data-filter="all">All</button>
+      <input id="product-search" type="search">
+      <span id="product-result-count"></span>
+      <div id="product-empty-state"></div>
+      <div id="product-grid">
+        <div class="product-col" data-category="sofas">
+          <h3 class="product-title">Emerald Sofa</h3>
+          <button class="add-to-cart-btn" data-product-name="Emerald Sofa" data-product-price="1850"></button>
+        </div>
+        <div class="product-col" data-category="chairs">
+          <h3 class="product-title">Accent Chair</h3>
+          <button class="add-to-cart-btn" data-product-name="Accent Chair" data-product-price="450"></button>
+        </div>
+      </div>
+    `;
+
+    require('../../js/custom.js');
+    const search = document.getElementById('product-search');
+    search.value = 'chair';
+    search.dispatchEvent(new Event('input', { bubbles: true }));
+
+    const products = document.querySelectorAll('.product-col');
+    expect(products[0].classList.contains('hidden')).toBe(true);
+    expect(products[1].classList.contains('hidden')).toBe(false);
+    expect(document.getElementById('product-result-count').textContent).toBe('1 item');
+  });
+
+  test('shopFilter sort orders products by price', () => {
+    document.body.innerHTML = `
+      <button class="filter-btn active" data-filter="all">All</button>
+      <select id="product-sort"><option value="price-asc">Price: low to high</option></select>
+      <div id="product-grid">
+        <div class="product-col" data-category="sofas">
+          <button class="add-to-cart-btn" data-product-name="Emerald Sofa" data-product-price="1850"></button>
+        </div>
+        <div class="product-col" data-category="chairs">
+          <button class="add-to-cart-btn" data-product-name="Accent Chair" data-product-price="450"></button>
+        </div>
+      </div>
+    `;
+
+    require('../../js/custom.js');
+    document.getElementById('product-sort').dispatchEvent(new Event('change', { bubbles: true }));
+
+    const first = document.querySelector('#product-grid .product-col .add-to-cart-btn');
+    expect(first.dataset.productName).toBe('Accent Chair');
+  });
 });

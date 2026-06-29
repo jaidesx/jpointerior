@@ -69,6 +69,16 @@
 
   function updateCartBadge() {
     var count = getCartCount();
+    document.querySelectorAll('.cart-nav-link, .custom-navbar-cta a[href="cart.html"]').forEach(function (link) {
+      if (!link.querySelector('.cart-count-badge')) {
+        var badge = document.createElement('span');
+        badge.className = 'cart-count-badge';
+        badge.textContent = '0';
+        badge.style.display = 'none';
+        link.appendChild(badge);
+      }
+    });
+
     document.querySelectorAll('.cart-count-badge').forEach(function (el) {
       el.textContent = count;
       el.style.display = count > 0 ? 'inline-flex' : 'none';
@@ -99,8 +109,12 @@
     });
 
     /* prevent the <a> product card from navigating */
-    document.querySelectorAll('a.product-item').forEach(function (a) {
-      a.addEventListener('click', function (e) { e.preventDefault(); });
+    document.querySelectorAll('.product-col a.product-item').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        e.preventDefault();
+        var addBtn = a.closest('.product-col').querySelector('.add-to-cart-btn');
+        if (addBtn) addBtn.click();
+      });
     });
   }
 
