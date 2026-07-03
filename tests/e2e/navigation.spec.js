@@ -1,8 +1,8 @@
 const { test, expect } = require('@playwright/test');
 
 const pages = [
-  { name: 'Home',     path: '/index.html',    heading: 'Modern Interior' },
-  { name: 'Shop',     path: '/shop.html',     heading: 'Our Shop' },
+  { name: 'Home',     path: '/index.html',    heading: 'Complete Homes' },
+  { name: 'Shop',     path: '/shop.html',     heading: 'Shop the Pieces' },
   { name: 'About',    path: '/about.html',    heading: 'About Us' },
   { name: 'Services', path: '/services.html', heading: 'Our Services' },
   // FIX: Was 'Latest Blog' — the actual h1 on blog.html is 'The Journal'
