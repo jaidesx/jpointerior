@@ -613,3 +613,76 @@
     padding: 8px 12px;
   }
 }
+
+/* ── Home mobile width containment ─────────────────────────────────── */
+@media (max-width: 767.98px) {
+  .home-page,
+  .home-page .custom-navbar,
+  .home-page .hero,
+  .home-page .stats-bar {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .home-page {
+    overflow-x: clip;
+  }
+
+  .home-page .custom-navbar {
+    left: 0;
+    right: 0;
+  }
+
+  .home-page .custom-navbar > .container,
+  .home-page .hero > .container,
+  .home-page .stats-bar > .container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .home-page .hero {
+    overflow: hidden;
+  }
+
+  .home-page .hero .row {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .home-page .hero .col-lg-5,
+  .home-page .hero .col-lg-7 {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .home-page .hero .hero-img-wrap {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .home-page .hero .hero-img-wrap img {
+    display: block;
+    width: 100%;
+    max-width: 100% !important;
+    height: auto;
+    left: 0 !important;
+    right: auto !important;
+  }
+
+  .home-page .hero .hero-img-wrap::after {
+    right: 0;
+    max-width: 55vw;
+  }
+
+  .home-page .testimonial-slider-wrap,
+  .home-page .testimonial-slider-wrap .tns-outer,
+  .home-page .testimonial-slider-wrap .tns-ovh,
+  .home-page .testimonial-slider-wrap .tns-inner {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+}
