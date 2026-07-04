@@ -201,6 +201,71 @@
   };
   newsletterForms();
 
+  /* ── PWA install prompt and service worker ─────────────────── */
+  var pwaEnhancements = function () {
+    var installPromptEvent = null;
+    var displayModeStandalone = window.matchMedia && window.matchMedia('(display-mode: standalone)').matches;
+    var isStandalone = displayModeStandalone || window.navigator.standalone === true;
+    var navCta = document.querySelector('.custom-navbar-cta');
+    var installItem = null;
+    var installButton = null;
+
+    function hideInstallButton() {
+      if (installButton) {
+        installButton.hidden = true;
+        installButton.setAttribute('aria-hidden', 'true');
+      }
+    }
+
+    function showInstallButton() {
+      if (!installButton || isStandalone) return;
+      installButton.hidden = false;
+      installButton.setAttribute('aria-hidden', 'false');
+    }
+
+    if (navCta && !isStandalone) {
+      installItem = document.createElement('li');
+      installItem.className = 'install-app-item';
+
+      installButton = document.createElement('button');
+      installButton.type = 'button';
+      installButton.className = 'install-app-btn';
+      installButton.hidden = true;
+      installButton.setAttribute('aria-hidden', 'true');
+      installButton.innerHTML = '<i class="fa fa-download" aria-hidden="true"></i><span>Install App</span>';
+
+      installItem.appendChild(installButton);
+      navCta.insertBefore(installItem, navCta.firstChild);
+
+      installButton.addEventListener('click', function () {
+        if (!installPromptEvent) return;
+        installPromptEvent.prompt();
+        installPromptEvent.userChoice.finally(function () {
+          installPromptEvent = null;
+          hideInstallButton();
+        });
+      });
+    }
+
+    window.addEventListener('beforeinstallprompt', function (event) {
+      event.preventDefault();
+      installPromptEvent = event;
+      showInstallButton();
+    });
+
+    window.addEventListener('appinstalled', function () {
+      installPromptEvent = null;
+      hideInstallButton();
+    });
+
+    if ('serviceWorker' in navigator && window.location.protocol !== 'file:') {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('service-worker.js').catch(function () {});
+      });
+    }
+  };
+  pwaEnhancements();
+
 })();
 
 function increaseValue(event, quantityAmount) {

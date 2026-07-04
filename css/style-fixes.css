@@ -527,3 +527,89 @@
     font-size: 30px;
   }
 }
+
+.install-app-item {
+  display: flex;
+  align-items: center;
+  margin-right: 12px;
+}
+
+.install-app-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 38px;
+  padding: 8px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.install-app-btn:hover,
+.install-app-btn:focus {
+  background: #f9bf29;
+  border-color: #f9bf29;
+  color: #2f2f2f;
+  transform: translateY(-1px);
+}
+
+.install-app-btn:focus-visible {
+  outline: 3px solid rgba(249, 191, 41, 0.45);
+  outline-offset: 3px;
+}
+
+.install-app-btn[hidden] {
+  display: none;
+}
+
+.offline-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: #eff2f1;
+}
+
+.offline-shell {
+  width: min(100%, 560px);
+  text-align: center;
+}
+
+.offline-logo {
+  width: 92px;
+  height: 92px;
+  object-fit: cover;
+  border-radius: 18px;
+  margin-bottom: 24px;
+  box-shadow: 0 16px 36px rgba(47, 47, 47, 0.14);
+}
+
+.offline-shell h1 {
+  margin-bottom: 16px;
+  color: #2f2f2f;
+  font-size: clamp(2rem, 8vw, 3.5rem);
+  line-height: 1.05;
+}
+
+.offline-shell p {
+  max-width: 430px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #6a6a6a;
+}
+
+@media (max-width: 767.98px) {
+  .install-app-item {
+    margin: 10px 10px 10px 0;
+  }
+
+  .install-app-btn {
+    min-height: 36px;
+    padding: 8px 12px;
+  }
+}
